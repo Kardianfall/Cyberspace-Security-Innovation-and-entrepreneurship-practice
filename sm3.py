@@ -158,6 +158,9 @@ def sm3_kdf(z, klen): # z为16进制表示的比特串（str），klen为密钥�
         ha = ha + sm3_hash(msg)
         ct += 1
     return ha[0: klen * 2]
-  
-
-
+ 
+#例子
+strs = "lindong"
+str_b = bytes(strs, encoding='utf-8')
+result = sm3.sm3_hash(func.bytes_to_list(str_b))
+print(result)
