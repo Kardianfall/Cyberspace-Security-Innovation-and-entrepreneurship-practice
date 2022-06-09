@@ -1,0 +1,49 @@
+#coding=utf-8
+import urllib
+import os,math,re,sys
+from pwn import *
+import base64
+import urllib
+import binascii
+file_dir = os.path.split(os.path.abspath(sys.argv[0]))[0]
+
+def get_init_vec(data):
+	print "0x"+data[0:8].decode('hex')[::-1].encode('hex')
+	print "0x"+data[8:16].decode('hex')[::-1].encode('hex')
+	print "0x"+data[16:24].decode('hex')[::-1].encode('hex')
+	print "0x"+data[24:32].decode('hex')[::-1].encode('hex')
+
+def get_my_mdX(data):
+	import execjs
+	my_mdx = open(os.path.join(file_dir, 'mdx.js')).read()
+	js = execjs.compile(my_mdx)
+	return js.call('mdX',data)
+def cal(x):
+	x*=8
+	s = str("%016x"%(x)).decode('hex')[::-1]
+	return s
+
+get_init_vec("619f93f7629561eb4b349ec7b76b4b29")
+"""
+0xf7939f61
+0xeb619562
+0xc79e344b
+0x294b6bb7
+"""
+part = 'xxxxxx'+'\x80'+'\x00'*(64-6-8-1)+cal(70)
+part_hex = part.encode('hex')
+print part_hex
+print get_my_mdX("61616164776780000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003002000000000000")
+for salt_length in range(8,33):
+	username = 'AAADWG' +'\x80'+'\x00'*(64-salt_length-1-8-6)+cal(salt_length+6)+'aaadwg'
+	passcode = "2d67ce095b15e192c613e40ea69876ea"
+	username = base64.b64encode(username)
+	passcode = base64.b64encode(passcode)
+	exp = '{ "username":"'+username+'","passcode":"'+passcode+'"}'
+	print exp
+	r = remote("10.214.10.13",11013)
+	context.log_level = 'debug'
+	r.recvuntil("tication:")
+	r.sendline(exp)
+	print r.recvall()
+	r.close()
