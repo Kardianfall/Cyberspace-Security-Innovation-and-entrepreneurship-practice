@@ -1,7 +1,15 @@
 # Cyberspace-Security-Innovation-and-entrepreneurship-practice
 Cyberspace Security Innovation and entrepreneurship practice
 Lin_Dong 
+成员 林动 账号 Kardianfall
+所做项目
+1.Implement the naïve birthday attack of reduced SM3 完成人：林动
+2.Implement a PGP scheme with SM2 完成人：林动
+代码说明见详细代码
+代码1相关文件：
+运行截图
 
+编年史
 2022-5-15 sm3代码实现参考研习
 
 2022-5-22 sm3 6位碰撞
