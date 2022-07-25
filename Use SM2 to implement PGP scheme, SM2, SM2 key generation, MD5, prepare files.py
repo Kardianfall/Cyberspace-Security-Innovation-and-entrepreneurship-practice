@@ -143,7 +143,7 @@ def scmy():
 
 
 #a,b=scmy()
-
+#此段出处https://wenku.baidu.com/view/31170d6a28160b4e767f5acfa1c7aa00b52a9d21.html
 
 
 ############################sm2具体
