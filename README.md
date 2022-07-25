@@ -18,6 +18,8 @@ Lin_Dong
 
 代码1相关文件：sm3 collision.py     sm3.py
 
+代码2相关文件：SM2 to PGP Collection.py      Use SM2 to implement PGP scheme, SM2, SM2 key generation, MD5, prepare files.py
+
 运行截图
 
 1：
