@@ -5,9 +5,10 @@ def  sm3_simple(a):
     str_b = bytes(strs, encoding='utf-8')
     result = sm3.sm3_hash(func.bytes_to_list(str_b))
     return result
-
+#加密过程
 
 start=0
+#建立字典攻击
 a={}
 i=start
 while True:
@@ -17,5 +18,5 @@ while True:
         i+=1
     else :
         break;
-
+#遍历数字生日攻击
 print("find 6 bits collision:%d and %d"%(i,a[x]))
