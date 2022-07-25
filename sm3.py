@@ -164,3 +164,4 @@ strs = "lindong"
 str_b = bytes(strs, encoding='utf-8')
 result = sm3.sm3_hash(func.bytes_to_list(str_b))
 print(result)
+##代码引用gmssl库
