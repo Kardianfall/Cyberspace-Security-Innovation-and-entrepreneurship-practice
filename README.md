@@ -28,11 +28,19 @@ Lin_Dong
 
 2：
 
+输入用户名自动生成公私钥
+
 ![image](https://github.com/Kardianfall/Cyberspace-Security-Innovation-and-entrepreneurship-practice/blob/main/1.png)
+
+输入邮件内容
 
 ![image](https://github.com/Kardianfall/Cyberspace-Security-Innovation-and-entrepreneurship-practice/blob/main/2.png)
 
+判断邮件长度
+
 ![image](https://github.com/Kardianfall/Cyberspace-Security-Innovation-and-entrepreneurship-practice/blob/main/3.png)
+
+校对是否一致
 
 ![image](https://github.com/Kardianfall/Cyberspace-Security-Innovation-and-entrepreneurship-practice/blob/main/4.png)
 
