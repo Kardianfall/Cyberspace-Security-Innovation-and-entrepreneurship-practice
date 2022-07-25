@@ -7,10 +7,10 @@ def  sm3_simple(a):
     return result
 #加密过程
 
-start=0
+
 #建立字典攻击
 a={}
-i=start
+i=int(input("start number:"))
 while True:
     x=str(sm3_simple(i)[:6])
     if a.get(x) ==None:
