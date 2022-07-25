@@ -14,7 +14,7 @@ Lin_Dong
 
 1：见详细代码
 
-2：运行过程又完整说明
+2：运行过程细见SM2_PGP文档
 
 代码1相关文件：sm3 collision.py     sm3.py
 
